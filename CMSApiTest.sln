@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSApiTest", "CMSApiTest\CMSApiTest.csproj", "{1AA1345E-47FF-49A9-BB10-D6097AC41B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK", "SDK\SDK.csproj", "{6BB9EA66-F7C3-45AA-AC64-32A5E305399C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AA1345E-47FF-49A9-BB10-D6097AC41B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA1345E-47FF-49A9-BB10-D6097AC41B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA1345E-47FF-49A9-BB10-D6097AC41B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA1345E-47FF-49A9-BB10-D6097AC41B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB9EA66-F7C3-45AA-AC64-32A5E305399C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB9EA66-F7C3-45AA-AC64-32A5E305399C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB9EA66-F7C3-45AA-AC64-32A5E305399C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB9EA66-F7C3-45AA-AC64-32A5E305399C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F63A0C51-7860-4E54-B0ED-E1FC4DD0E952}
+	EndGlobalSection
+EndGlobal
