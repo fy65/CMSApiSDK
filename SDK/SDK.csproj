@@ -55,7 +55,6 @@
     <Compile Include="Common\TimeHelper.cs" />
     <Compile Include="Common\UtilHelper.cs" />
     <Compile Include="Common\LanguageEnum.cs" />
-    <Compile Include="Models\ProductGroupMOD.cs" />
     <Compile Include="Models\ProductGroupRequest.cs" />
     <Compile Include="Models\ProductRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
