@@ -24,7 +24,7 @@ namespace CMSApiTest
             txtMsg.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "：" + message.ToString();
         }
 
-        ProxyHelper proxyHelper = new ProxyHelper("0cef0ec20f75439a90de0714e125dc92", "8caf4f8e25824b9da18f6296ca96d9e7");
+        ProxyHelper proxyHelper = new ProxyHelper("73cd76070f384360a8dcf1d6bed1fbe1", "ce6735eeeae748e1a69b6740587d68b9");
         long memberInfo_Id = 23191L;
         LanguageEnum languageEnum = LanguageEnum.中文;
          
