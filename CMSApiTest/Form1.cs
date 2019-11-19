@@ -27,23 +27,10 @@ namespace CMSApiTest
         ProxyHelper proxyHelper = new ProxyHelper("0cef0ec20f75439a90de0714e125dc92", "8caf4f8e25824b9da18f6296ca96d9e7");
         long memberInfo_Id = 23191L;
         LanguageEnum languageEnum = LanguageEnum.中文;
-        private void button1_Click(object sender, EventArgs e)
+         
+        private void button4_Click(object sender, EventArgs e)
         {
-            var jsonResult = "";
-            //jsonResult = proxyHelper.GetWebsiteTemplateList(1, 100);
-
-            //jsonResult = proxyHelper.CreateMemberAccount("qaa", "123456");
-
-            //jsonResult = proxyHelper.ChangeCaseTemplate(1, 2);
-
-            //jsonResult = proxyHelper.GetProductGroupList(memberInfo_Id, languageEnum);//获取产品分类列表
-
-            //jsonResult = proxyHelper.GetProductGroup(memberInfo_Id, languageEnum, 15545);
-
-            //jsonResult = SaveProduct();//发布产品
-
-            msg(jsonResult);
-
+            MessageBox.Show("只是一个测试按钮而已");
         }
 
         #region 注册账号
@@ -138,7 +125,7 @@ namespace CMSApiTest
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var id = 15576L;//产品分类Id
+            var id = 15603;//产品分类Id
             var jsonResult = proxyHelper.GetProductGroupDetail(memberInfo_Id, languageEnum, id);//获取产品分类列表
             msg(jsonResult);
         }
@@ -190,8 +177,9 @@ namespace CMSApiTest
         }
 
 
+
         #endregion
 
-
+        
     }
 }
