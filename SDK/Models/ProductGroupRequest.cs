@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fy.SDK.Models 
+namespace Fy.SDK.Models
 {
-    public class ProductGroupRequest  
+    public class ProductGroupRequest
     {
         #region 原始字段
 
@@ -30,18 +30,16 @@ namespace Fy.SDK.Models
         /// 分类名称
         /// </summary>
         public string Name { get; set; }
+         
         /// <summary>
-        /// 级数
-        /// </summary>
-        public int Lv { get; set; }
-        /// <summary>
-        /// 分类图片Id
-        /// </summary>
-        public long FileId { get; set; }
-        /// <summary>
-        /// 分类图片
+        /// 图片1
         /// </summary>
         public string FilePath { get; set; }
+        /// <summary>
+        /// 图2,悬停图
+        /// </summary>
+        public string ImagePath2 { get; set; }
+         
         /// <summary>
         /// SEO标题
         /// </summary>
@@ -54,6 +52,8 @@ namespace Fy.SDK.Models
         /// SEO描述
         /// </summary>
         public string SeoDescription { get; set; }
+
+
         /// <summary>
         /// 纯文本内容简介（500字）
         /// </summary>
@@ -66,24 +66,13 @@ namespace Fy.SDK.Models
         /// 编辑器内容
         /// </summary>
         public string Content { get; set; }
-        /// <summary>
-        /// 图2
-        /// </summary>
-        public string ImagePath2 { get; set; }
-        /// <summary>
-        /// 图2Id
-        /// </summary>
-        public long ImagePath2_Id { get; set; }
-
+         
         /// <summary>
         /// 排序 前端从小到大
+        /// 前对对应  越小越靠前  可以为负数
         /// </summary>
         public int Sort { get; set; }
-        /// <summary>
-        /// 创建日期
-        /// </summary>
-        public DateTime CreateTime { get; set; }
-
+      
 
         #endregion
     }

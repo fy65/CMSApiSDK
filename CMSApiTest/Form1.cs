@@ -27,7 +27,7 @@ namespace CMSApiTest
         ProxyHelper proxyHelper = new ProxyHelper("73cd76070f384360a8dcf1d6bed1fbe1", "ce6735eeeae748e1a69b6740587d68b9");
         long memberInfo_Id = 23191L;
         LanguageEnum languageEnum = LanguageEnum.中文;
-         
+
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("只是一个测试按钮而已");
@@ -37,7 +37,7 @@ namespace CMSApiTest
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var jsonResult = proxyHelper.CreateMemberAccount("fyjzdemo1", "Tkw123456");
+            var jsonResult = proxyHelper.CreateMemberAccount("fyjzdemo7", "Tkw123456");
             msg(jsonResult);
         }
         #endregion
@@ -55,10 +55,11 @@ namespace CMSApiTest
 
         private void button8_Click(object sender, EventArgs e)
         {
-            long template_Id = 1;
-            long memberInfo_id = 1;
+            //{"code":200,"msg":"创建成功","count":0,"data":24432}
+            long template_Id = 17882;
+            long memberInfo_id = 24432;
 
-            var jsonResult = proxyHelper.ChangeCaseTemplate(1, 2);
+            var jsonResult = proxyHelper.ChangeCaseTemplate(template_Id, memberInfo_id);
             msg(jsonResult);
         }
         #endregion
@@ -160,11 +161,12 @@ namespace CMSApiTest
             product.Summary = "简介";
             product.CustomContent = "多行参数\r\n颜色：红色\r\n尺寸：100cm\r\n";//换行请用\r\n
             product.Content = "产品内容";
-            product.AuthorName = "作者admin";
+            //product.AuthorName = "作者admin";
             product.Price = 10;//价格 
-            product.Quantity = "1000";//库存
+            //product.Quantity = "1000";//库存
             product.Unit = "个";
-            product.TelePhone = "0755";
+            product.MinOrderCount = 10;
+            //product.TelePhone = "0755";
 
             //独立的TDK
             product.SeoTitle = "";
@@ -180,6 +182,6 @@ namespace CMSApiTest
 
         #endregion
 
-        
+
     }
 }
