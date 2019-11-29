@@ -77,7 +77,10 @@ namespace CMSApiTest
 
         private void button9_Click(object sender, EventArgs e)
         {
-            var jsonResult = proxyHelper.SetMemberLevel(memberInfo_Id, CMSMemberLevelEnum.入门版);
+            var openTime = DateTime.Now; //开通时间  
+            var expireTime = openTime.AddYears(1);//截止时间
+            //级别说明=https://www.fy65.com/site/price165.html#t1
+            var jsonResult = proxyHelper.SetMemberLevel(memberInfo_Id, CMSMemberLevelEnum.入门版, openTime, expireTime);
             msg(jsonResult);
         }
         #endregion

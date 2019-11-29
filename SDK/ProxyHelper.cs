@@ -167,15 +167,20 @@ namespace Fy.SDK
         /// </summary>
         /// <param name="memberInfo_Id"></param>
         /// <param name="memberLevel"></param>
+        /// <param name="openTime">开通时间</param>
+        /// <param name="expireTime">到期时间</param>
         /// <returns>
         /// code=0:设置失败
         /// code=200：设置成功
         /// </returns>
-        public string SetMemberLevel(long memberInfo_Id, CMSMemberLevelEnum memberLevel)
+        public string SetMemberLevel(long memberInfo_Id, CMSMemberLevelEnum memberLevel, DateTime openTime, DateTime expireTime)
         {
             Dictionary<String, string> postParameters = new Dictionary<string, string>();
             postParameters.Add("memberInfo_id", memberInfo_Id.ToStr());
             postParameters.Add("memberLevel", ((int)memberLevel).ToStr());
+
+            postParameters.Add("opentime", openTime.ToDateTimeStr());
+            postParameters.Add("expiretime", expireTime.ToDateTimeStr());
 
             var url = $"{apiDomain}/api/Proxy/SetMemberLevel";
             var postData = SignatureHelper.ConvertSignString(postParameters, AccessKeyId, AccessKeySecret);
