@@ -1,4 +1,5 @@
-﻿using Fy.SDK;
+﻿using Fy.Common;
+using Fy.SDK;
 using Fy.SDK.Models;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,8 @@ namespace CMSApiTest
             txtMsg.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "：" + message.ToString();
         }
 
-        ProxyHelper proxyHelper = new ProxyHelper("73cd76070f384360a8dcf1d6bed1fbe1", "ce6735eeeae748e1a69b6740587d68b9");
-        long memberInfo_Id = 23191L;
+        ProxyHelper proxyHelper = new ProxyHelper();
+        long memberInfo_Id = ConfigHelper.GetAppSettingValue("demoMemberInfo_id").ToInt64();
         LanguageEnum languageEnum = LanguageEnum.中文;
 
         private void button4_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace CMSApiTest
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var jsonResult = proxyHelper.CreateMemberAccount("fyjzdemo7", "Tkw123456");
+            var jsonResult = proxyHelper.CreateMemberAccount("fy1234", "Tkw123456");
             msg(jsonResult);
         }
         #endregion
@@ -55,11 +56,8 @@ namespace CMSApiTest
 
         private void button8_Click(object sender, EventArgs e)
         {
-            //{"code":200,"msg":"创建成功","count":0,"data":24432}
-            long template_Id = 17882;
-            long memberInfo_id = 24432;
-
-            var jsonResult = proxyHelper.ChangeCaseTemplate(template_Id, memberInfo_id);
+            long template_Id = 5832; //模板Id
+            var jsonResult = proxyHelper.ChangeCaseTemplate(template_Id, memberInfo_Id);
             msg(jsonResult);
         }
         #endregion
@@ -68,7 +66,6 @@ namespace CMSApiTest
 
         private void button10_Click(object sender, EventArgs e)
         {
-            memberInfo_Id = 1491;
             var jsonResult = proxyHelper.CheckCreateTaskProgress(memberInfo_Id);
             msg(jsonResult);
 
@@ -80,7 +77,6 @@ namespace CMSApiTest
 
         private void button9_Click(object sender, EventArgs e)
         {
-            memberInfo_Id = 1491;
             var jsonResult = proxyHelper.SetMemberLevel(memberInfo_Id, CMSMemberLevelEnum.入门版);
             msg(jsonResult);
         }
@@ -180,8 +176,16 @@ namespace CMSApiTest
 
 
 
+
         #endregion
 
+        #region 获取域名列表
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var jsonResult = proxyHelper.GetMemberDomainList(memberInfo_Id);
+            msg(jsonResult);
+        }
+        #endregion
     }
 }
